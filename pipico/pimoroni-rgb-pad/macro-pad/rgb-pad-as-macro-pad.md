@@ -11,6 +11,10 @@ tags:
   - rgbkeypad
 ---
 
+Dieses kleine Projekt habe ich auf GitHub entdeckt und es hat mich dazu inspiriert, mein RGB-Keypad in ein Makro-Pad umzubauen.
+Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spielen bin ich aktuell noch dabei, ein Ghosting-Problem zu debuggen, da die Makrotasten nach der Betätigung nur sporadisch korrekt auf Press- und Release-Logik reagieren.
+
+
 # 📝 Pi Pico 2040
 
 > [!abstract] Spezifikationen Hardware
@@ -778,4 +782,53 @@ Wenn Taste gedrückt wird: Signal "halten" aktivieren
 Wenn Taste losgelassen wird: Signal aufheben
 ```kb.release(*TASTEN_BELEGUNG[index])```
 
+---
 
+### 🛠️ Beispiel anhand von Pseudocode
+
+```
+letzter_zustand = 0
+
+while True:
+    aktueller_zustand = keypad.get_button_states()
+    
+    # Nur aktiv werden, wenn sich überhaupt etwas geändert hat
+    if aktueller_zustand != letzter_zustand:
+        
+        # Jedes der 16 Bits einzeln prüfen
+        for index in range(16):
+            # Erstelle die Bitmaske für die aktuelle Taste (1, 2, 4, 8, etc.)
+            bitmaske = 1 << index
+            
+            # 1. FALL: Taste wird GERADE GEDRÜCKT 
+            # (Bit ist JETZT 1, war VORHER 0)
+            if (aktueller_zustand & bitmaske) and not (letzter_zustand & bitmaske):
+                
+                # Prüfen, ob für diesen Index überhaupt eine Taste definiert ist
+                if index in TASTEN_BELEGUNG and TASTEN_BELEGUNG[index]:
+                    # Signal "halten" aktivieren (perfekt für Pfeiltasten & Makros)
+                    kb.press(*TASTEN_BELEGUNG[index])
+                
+                # LED einschalten (deine definierte Farbe)
+                if index in colors:
+                    keypad.illuminate(index, *colors[index])
+                    keypad.update()
+
+            # 2. FALL: Taste wird GERADE LOSGELASSEN 
+            # (Bit ist JETZT 0, war VORHER 1)
+            elif not (aktueller_zustand & bitmaske) and (letzter_zustand & bitmaske):
+                
+                # Signal wieder aufheben
+                if index in TASTEN_BELEGUNG and TASTEN_BELEGUNG[index]:
+                    kb.release(*TASTEN_BELEGUNG[index])
+                
+                # LED wieder ausschalten (oder auf Standardfarbe setzen)
+                keypad.illuminate(index, 0, 0, 0)
+                keypad.update()
+        
+        # Den aktuellen Zustand für den nächsten Durchlauf merken
+        letzter_zustand = aktueller_zustand
+        
+    time.sleep(0.01) # Ganz kurzes Delay für die Stabilität
+    
+```
