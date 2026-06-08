@@ -13,8 +13,8 @@ tags:
 
 Dieses kleine feine Projekt habe ich bei https://github.com/dottxado/pico-macro-pad entdeckt und es hat mich inspiriert, mein RGB Keypad in ein Makro Pad umzuändern.
 Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spielen bin ich aktuell noch dabei, ein Ghosting-Problem zu debuggen, da die Makrotasten nach der Betätigung nur sporadisch korrekt auf Press- und Release-Logik reagieren. Ich wünsche dir viel Spaß in der Umsetzung deines Makro Pads!
----
 
+---
 
 # 📝 Pi Pico 2040
 
