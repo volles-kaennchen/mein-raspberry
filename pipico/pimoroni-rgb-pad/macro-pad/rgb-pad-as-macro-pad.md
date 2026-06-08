@@ -1,3 +1,16 @@
+---
+author: volles-kaennchen
+created: 08-06-2026 20:56:25
+updated: 08-06-2026 20:56:25
+topic: App-Baukasten
+tags:
+  - pipico
+  - raspberry
+  - pimoroni
+  - macropad
+  - rgbkeypad
+---
+
 # 📝 Pi Pico 2040
 
 > [!abstract] Spezifikationen Hardware
