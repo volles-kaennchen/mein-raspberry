@@ -327,7 +327,6 @@ while True:
     time.sleep(0.001)
 ```
 ---
----
 ## 🛠️ Konfiguration
 
 ### Datei: configurations.py
