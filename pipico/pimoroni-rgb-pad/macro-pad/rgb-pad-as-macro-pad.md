@@ -18,6 +18,8 @@ Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spiele
 
 # 📝 Pi Pico 2040
 
+https://www.raspberrypi.com/products/raspberry-pi-pico/
+
 > [!abstract] Spezifikationen Hardware:
 
 | Merkmal | Spezifikation |
@@ -41,6 +43,8 @@ Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spiele
 | Temperaturbereich | −20 °C bis +70 °C |
 
 # 📝 Pimoroni RGB Keypad
+
+https://shop.pimoroni.com/products/pico-rgb-keypad-base?variant=32369517166675
 
 > [!abstract] Spezifikationen Hardware:
 
