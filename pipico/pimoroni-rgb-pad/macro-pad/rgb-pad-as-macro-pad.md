@@ -44,6 +44,22 @@ Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spiele
 
 > [!abstract] Spezifikationen Hardware:
 
+| Merkmal | Spezifikation |
+|--------|--------------|
+| Produkt | Pimoroni RGB Keypad (Pico RGB Keypad Base) |
+| Mikrocontroller | kein eigener (läuft über Raspberry Pi Pico / Pico W) |
+| Kompatible Boards | Raspberry Pi Pico, Pico W |
+| Tasten | 16 mechanische Tasten (4×4 Matrix) |
+| Switch-Typ | Hot-Swap (MX-kompatibel) |
+| RGB-Beleuchtung | 16 individuell adressierbare RGB-LEDs |
+| LED-Controller | IS31FL3731 (LED-Matrix-Treiber) |
+| Schnittstelle | I²C (für LED-Steuerung) + GPIO für Tastenmatrix |
+| Stromversorgung | über Pico (USB / VSYS des Pico) |
+| Betriebsspannung | 3,3 V Logik (Pico-kompatibel) |
+| Erweiterung | optional Acryl-Case / Stackable Base |
+| Firmware-Support | MicroPython / CircuitPython / C/C++ SDK |
+| Abmessungen | ca. 5×5 cm (je nach Version leicht variierend) |
+
 ---
 ## 🛠️ Die richtigen Dateien auf den Pico laden
 
