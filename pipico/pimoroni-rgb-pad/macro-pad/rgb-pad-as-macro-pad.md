@@ -12,18 +12,37 @@ tags:
 ---
 
 Dieses kleine feine Projekt habe ich bei https://github.com/dottxado/pico-macro-pad entdeckt und es hat mich inspiriert, mein RGB Keypad in ein Makro Pad umzuändern.
-Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spielen bin ich aktuell noch dabei, ein Ghosting-Problem zu debuggen, da die Makrotasten nach der Betätigung nur sporadisch korrekt auf Press- und Release-Logik reagieren.
+Die Makros wie z. B. STRG+V funktionieren problemlos. Für den Einsatz in Spielen bin ich aktuell noch dabei, ein Ghosting-Problem zu debuggen, da die Makrotasten nach der Betätigung nur sporadisch korrekt auf Press- und Release-Logik reagieren. Ich wünsche dir viel Spaß in der Umsetzung deines Makro Pads!
+---
 
 
 # 📝 Pi Pico 2040
 
-> [!abstract] Spezifikationen Hardware
-> einfügen
+> [!abstract] Spezifikationen Hardware:
+
+| Merkmal | Spezifikation |
+|--------|--------------|
+| Mikrocontroller | RP2040 |
+| CPU | Dual-Core ARM Cortex-M0+ |
+| Taktfrequenz | bis 133 MHz |
+| SRAM | 264 KB |
+| Flash-Speicher | 2 MB QSPI Flash |
+| WLAN | 2,4 GHz IEEE 802.11n |
+| Bluetooth | Bluetooth 5.2 (Classic + LE) |
+| GPIOs | 26 nutzbare GPIO-Pins |
+| ADC | 3 externe 12-Bit-ADC-Eingänge |
+| PWM | 16 Kanäle |
+| Schnittstellen | 2× UART, 2× SPI, 2× I²C |
+| USB | USB 1.1 Host/Device |
+| PIO | 8 State Machines (2 PIO-Blöcke) |
+| Betriebsspannung | 1,8–5,5 V Eingang (VSYS) |
+| Logikpegel | 3,3 V |
+| Abmessungen | 51 × 21 mm |
+| Temperaturbereich | −20 °C bis +70 °C |
 
 # 📝 Pimoroni RGB Keypad
 
-> [!abstract] Spezifikationen Hardware
-> 16 x APA102 addressable RGB LEDs
+> [!abstract] Spezifikationen Hardware:
 
 ---
 ## 🛠️ Die richtigen Dateien auf den Pico laden
