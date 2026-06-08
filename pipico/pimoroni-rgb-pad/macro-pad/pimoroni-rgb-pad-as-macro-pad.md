@@ -700,4 +700,82 @@ class EmptyMacro(AbstractMacro):
         pass
 ```
 
+---
+
+### Übersetzung der Tasten in HID-Keycodes
+Makros definieren (HID Befehle): 
+```
+TASTEN_BELEGUNG = {
+    0: [Keycode.ESCAPE],
+    1: [Keycode.CONTROL, Keycode.S],
+    2: [Keycode.CONTROL, Keycode.C],
+    3: [Keycode.CONTROL, Keycode.V],
+    4: [Keycode.TAB],
+    5: [Keycode.CONTROL], # spezifischer Key für "Speed"
+    6: [Keycode.UP_ARROW],
+    7: [Keycode.E], # Keycode.I
+    8: [Keycode.#], # leer
+    9: [Keycode.LEFT_ARROW],
+    10: [Keycode.END], # Oder z.B. Keycode.C für "Crouch" 
+    11: [Keycode.RIGHT_ARROW],
+    12: [Keycode.#],# leer
+    13: [Keycode.SHIFT], # (In der Liste Key D genannt, Index 13)
+    14: [Keycode.DOWN_ARROW],
+    15: [Keycode.I] # Keycode.E 
+}
+```
+## 🛠️Tasten, Farben und Funktionen
+
+Keyboard Layout US (da Sprache vom Pico, Skript (Ada, py etc.) dieselbe sein müssen)
+Bei der Tastenbelegung daher aufpassen (z.B. vertauschte Buchstaben Y und Z)
+### Personalisierte Farben
+
+```
+colors = {  
+0: (250, 255, 0),
+1: (0, 7, 255),
+2: (0, 230, 255),  
+3: (0, 230, 255),  
+4: (250, 255, 0),
+5: (7, 255, 0),
+6: (255, 0, 137),
+7: (255, 103, 0),
+8: (57, 0, 169),
+9: (255, 0, 137),
+10: (7, 255, 0),
+11: (255, 0, 137),
+12: (57, 0, 169),  
+14: (7, 255, 0),
+15: (255, 0, 137),  
+16: (255, 103, 0)  
+}
+```
+
+---
+
+## 🛠️ Eingaben spezifizieren
+
+### Erkennung der steigenden Flanke
+Triggern von Tasten (Makros)
+
+___Eine Taste soll erst dann wieder triggern, wenn sie vorher losgelassen wurde. Einmal kurz tippen, Aktion einmal ausführen.___
+```kb.send()```
+
+Befehl senden (drückt und lässt alle Tasten in der Liste gleichzeitig los)
+```kb.send(*TASTEN_BELEGUNG[index])```
+
+---
+### Press & Release"-Logik
+Kontinuierliche Eingaben (Bewegungstasten)
+
+___Solange der Finger auf der Taste ist, muss das Signal "Taste ist gedrückt" an den PC gesendet werden. Erst beim Loslassen wird das Signal gestoppt.___
+```kb.press()``` und ```kb.release()```
+
+Anstatt nur den finalen Index zu berechnen, prüfen wir die einzelnen Bits.
+Wenn Taste gedrückt wird: Signal "halten" aktivieren
+```kb.press(*TASTEN_BELEGUNG[index])```
+
+Wenn Taste losgelassen wird: Signal aufheben
+```kb.release(*TASTEN_BELEGUNG[index])```
+
 
