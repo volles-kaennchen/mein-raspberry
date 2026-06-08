@@ -600,25 +600,21 @@ Diese Datei dient als **Schablone** oder Vertrag. Sie sagt dem Anwender und Pyth
 ```
 class AbstractConfiguration:
 
-    # The name will be visible in the console
 
     def getName():
 
         return ""
 
-    # The color will colorize the button of the configuration and it's macros
 
     def getColor():
 
         return (0, 0, 0)
 
-    # Return an array of maximum 15 macros
 
     def getMacros():
 
         return []
 
-    # Needed to do nothing when is selected a not-configured button
 
     def nothing():
 
@@ -628,13 +624,11 @@ class AbstractConfiguration:
 
 class AbstractMacro:
 
-    # The name will be visible in the console
 
     def getMacroName():
 
         return ""
 
-    # Here you will implement the actions of your macro
 
     def getMacro():
 
@@ -654,30 +648,25 @@ if i < len(macros) and not issubclass(macros[i], EmptyMacro):
 ### Datei: empty_classes.py
 ```
 from abstract_classes import AbstractConfiguration, AbstractMacro
-
-  
+ 
 
 class EmptyConfiguration(AbstractConfiguration):
 
-    # No name for this configuration
 
     def getName():
 
         return ""
 
-    # No color
 
     def getColor():
 
         return (0, 0, 0)
 
-    # No macros
 
     def getMacros():
 
         return []
 
-    # Nothing
 
     def nothing():
 
@@ -687,13 +676,11 @@ class EmptyConfiguration(AbstractConfiguration):
 
 class EmptyMacro(AbstractMacro):
 
-    # No nanme for this macro
 
     def getMacroName():
 
         return ""
 
-    # No actions for this macro
 
     def getMacro():
 
