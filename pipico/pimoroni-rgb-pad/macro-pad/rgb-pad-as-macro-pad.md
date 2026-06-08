@@ -698,15 +698,15 @@ TASTEN_BELEGUNG = {
     2: [Keycode.CONTROL, Keycode.C],
     3: [Keycode.CONTROL, Keycode.V],
     4: [Keycode.TAB],
-    5: [Keycode.CONTROL], # spezifischer Key für "Speed"
+    5: [Keycode.CONTROL],
     6: [Keycode.UP_ARROW],
-    7: [Keycode.E], # Keycode.I
-    8: [Keycode.#], # leer
+    7: [Keycode.E], 
+    8: [Keycode.#],
     9: [Keycode.LEFT_ARROW],
-    10: [Keycode.END], # Oder z.B. Keycode.C für "Crouch" 
+    10: [Keycode.END],
     11: [Keycode.RIGHT_ARROW],
-    12: [Keycode.#],# leer
-    13: [Keycode.SHIFT], # (In der Liste Key D genannt, Index 13)
+    12: [Keycode.#],
+    13: [Keycode.SHIFT],
     14: [Keycode.DOWN_ARROW],
     15: [Keycode.I] # Keycode.E 
 }
