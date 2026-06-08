@@ -2,7 +2,7 @@
 author: volles-kaennchen
 created: 08-06-2026 20:56:25
 updated: 08-06-2026 20:56:25
-topic: App-Baukasten
+topic: RSPB-Baukasten
 tags:
   - pipico
   - raspberry
