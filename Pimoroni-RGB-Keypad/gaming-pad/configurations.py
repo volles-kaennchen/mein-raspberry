@@ -8,10 +8,6 @@ from adafruit_hid.keycode import Keycode
  
 keyboard = Keyboard(usb_hid.devices)
  
-# ==============================================================================
-# HIER DEINE MAKROS EINTRAGEN / ERWEITERN
-# ==============================================================================
- 
 class EscapeMacro(AbstractMacro):
     def getMacroName(): return 'ESC'
     def getMacro(): keyboard.send(Keycode.ESCAPE)
@@ -39,10 +35,7 @@ class E_Macro(AbstractMacro):
 class I_Macro(AbstractMacro):
     def getMacroName(): return 'I'
     def getMacro(): keyboard.send(Keycode.I)
- 
- 
-# --- GAMING TASTEN (Überschreiben getReleaseCode für dauerhaftes Halten) ---
- 
+  
 class SpeedMacro(AbstractMacro):
     def getMacroName(): return 'Speed'
     def getMacro(): keyboard.press(Keycode.LEFT_CONTROL)
@@ -77,12 +70,7 @@ class DownMacro(AbstractMacro):
     def getMacroName(): return 'Down'
     def getMacro(): keyboard.press(Keycode.DOWN_ARROW)
     def getReleaseCode(): return Keycode.DOWN_ARROW
- 
- 
-# ==============================================================================
-# DEIN PROFIL (Gaming Pad)
-# ==============================================================================
- 
+  
 class GamingPad(AbstractConfiguration):
     def getName():
         return 'Gaming Pad'
