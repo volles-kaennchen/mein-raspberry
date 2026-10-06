@@ -1,6 +1,5 @@
-## 📝 Raspberry Pi Pico
-
-> **Spezifikationen Hardware**
+## Hardware: Raspberry Pi Pico
+https://www.berrybase.de/en/raspberry-pi-pico-w-rp2040-wlan-microcontroller-board
 
 | Merkmal | Spezifikation |
 | :--- | :--- |
@@ -22,9 +21,8 @@
 | **Abmessungen** | 51 × 21 mm |
 | **Temperaturbereich** | −20 °C bis +70 °C |
 
-## 📝 Pimoroni RGB Keypad
-
-> **Spezifikationen Hardware**
+## Hardware: Pimoroni RGB Keypad
+https://shop.pimoroni.com/en-eu/products/pico-rgb-keypad-base?variant=32369517166675
 
 | Merkmal | Spezifikation |
 | :--- | :--- |
