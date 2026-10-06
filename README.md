@@ -64,7 +64,7 @@ Github: https://github.com/adafruit/Adafruit_CircuitPython_Bundle oder Bundle Ve
 	adafruit_dotstar 
 
 ---
-## 🛠️ Ordnerstruktur CIRCUITPY 
+### Ordnerstruktur CIRCUITPY 
 ```
 lib/
 	adafruit_hid/         
@@ -74,7 +74,6 @@ code.py
 ```
 
 ### 4x4 Matrix LED 
-
 #### Farbauswahl (Beispiel)
 ```
 #FF299B | RGB (255, 41, 155) - Rosa 
