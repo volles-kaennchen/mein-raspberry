@@ -41,9 +41,9 @@ https://shop.pimoroni.com/en-eu/products/pico-rgb-keypad-base?variant=3236951716
 | **Abmessungen** | ca. 5 × 5 cm |
 
 ---
-## 🛠️ Die richtigen Dateien auf den Pico laden
+### Die richtigen Dateien auf den Pico laden
 
-### Erstes Setup 
+## Erstes Setup 
 
 https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython
 
