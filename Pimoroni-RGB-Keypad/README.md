@@ -1,26 +1,3 @@
-## Hardware: Raspberry Pi Pico
-https://www.berrybase.de/en/raspberry-pi-pico-w-rp2040-wlan-microcontroller-board
-
-| Merkmal | Spezifikation |
-| :--- | :--- |
-| **Mikrocontroller** | RP2040 |
-| **CPU** | Dual-Core ARM Cortex-M0+ |
-| **Taktfrequenz** | bis 133 MHz |
-| **SRAM** | 264 KB |
-| **Flash-Speicher** | 2 MB QSPI Flash |
-| **WLAN** | 2,4 GHz IEEE 802.11n *(nur beim Pico W)* |
-| **Bluetooth** | Bluetooth 5.2 *(nur beim Pico W)* |
-| **GPIOs** | 26 nutzbare GPIO-Pins |
-| **ADC** | 3 externe 12-Bit-ADC-Eingänge |
-| **PWM** | 16 Kanäle |
-| **Schnittstellen** | 2× UART, 2× SPI, 2× I²C |
-| **USB** | USB 1.1 Host/Device |
-| **PIO** | 8 State Machines (2 PIO-Blöcke) |
-| **Betriebsspannung** | 1,8–5,5 V Eingang (VSYS) |
-| **Logikpegel** | 3,3 V |
-| **Abmessungen** | 51 × 21 mm |
-| **Temperaturbereich** | −20 °C bis +70 °C |
-
 ## Hardware: Pimoroni RGB Keypad
 https://shop.pimoroni.com/en-eu/products/pico-rgb-keypad-base?variant=32369517166675
 
@@ -40,7 +17,7 @@ https://shop.pimoroni.com/en-eu/products/pico-rgb-keypad-base?variant=3236951716
 | **Firmware-Support** | MicroPython / CircuitPython / C/C++ SDK |
 | **Abmessungen** | ca. 5 × 5 cm |
 
-
+# Allgemeine Info
 ## Initialisierung
 
 ### Hardware, Helligkeit und erster Refresh
