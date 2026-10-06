@@ -1,4 +1,4 @@
-## 🛠️ Initialisierung
+## Initialisierung
 
 ### Hardware, Helligkeit und erster Refresh
 
@@ -9,7 +9,7 @@ keypad.set_brightness(1.0)
 keypad.update()
 ```
 
-## 🛠️ LED
+## LED
 
 ### Der zentrale Befehl für alles visuelle
 
@@ -30,7 +30,7 @@ keypad.illuminate(index, r, g, b)
 keypad.update()
 ```
 
-## 🛠️Einzelne Farben definieren
+## Einzelne Farben definieren
 
 ```
 import picokeypad
@@ -39,14 +39,14 @@ keypad.set_brightness(1.0)
 keypad.update()
 ```
 
-## 🛠️Eingabe speichern
+## Eingabe speichern
 
 ```
 sequence = []
 sequence.append(index)
 ```
 
-## 🛠️Tasteneingabe
+## Tasteneingabe
 
 	genauer Bitwert (1, 2, 4, 8 … 32768)
 
@@ -54,7 +54,7 @@ sequence.append(index)
 button_states = keypad.get_button_states()
 ```
 
-## 🛠️Sequenz abspielen
+## Sequenz abspielen
 
 ```
 for step in sequence:
@@ -78,7 +78,7 @@ def get_index(button_states):
     return int(math.log2(button_states))
 ```
 
-## 🛠️Playback
+## Playback
 
 ```
 def play_sequence():
