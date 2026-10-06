@@ -50,10 +50,10 @@
 https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython
 
 CircuitPython 10.2.1: https://circuitpython.org/board/raspberry_pi_pico/
-	Dateien herunterladen
-	BOOTSEL Taste am Pico gedrückt halten und Pico mit PC verbinden
-	Wenn sich der Dateimanager öffnet, die UF2 auf das Laufwerk kopieren
-	Interface schließt sich, wenn Installation erfolgreich
+Dateien herunterladen
+BOOTSEL Taste am Pico gedrückt halten und Pico mit PC verbinden
+Wenn sich der Dateimanager öffnet, die UF2 auf das Laufwerk kopieren
+-> Interface schließt sich, wenn Installation erfolgreich
 
 Github: https://github.com/adafruit/Adafruit_CircuitPython_Bundle oder Bundle Version 10.x: https://circuitpython.org/libraries 
 
@@ -64,15 +64,13 @@ Github: https://github.com/adafruit/Adafruit_CircuitPython_Bundle oder Bundle Ve
 	adafruit_dotstar 
 
 ---
-## 🛠️ Ordnerstruktur 
-
-### CIRCUITPY
+## 🛠️ Ordnerstruktur CIRCUITPY 
 ```
 lib/
 	adafruit_hid/         
 	adafruit_bus_device/   
 	adafruit_dotstar.py    
-code.py (Hauptprogramm)       
+code.py       
 ```
 
 ### 4x4 Matrix LED 
